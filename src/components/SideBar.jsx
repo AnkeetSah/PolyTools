@@ -25,7 +25,7 @@ const Sidebar = ({ onLinkClick }) => {
               to={to}
               onClick={onLinkClick}
               className={({ isActive }) =>
-                `transition-colors flex items-center gap-2 px-2 py-1 mb-2 rounded-lg text-sm font-medium ${
+                `transition-colors flex items-center gap-2 px-2 py-1 mb-2 rounded-lg lg:text-sm text-lg font-medium ${
                   isActive
                     ? 'bg-purple-100 text-purple-900'
                     : 'text-gray-600 hover:bg-purple-100 hover:text-purple-900'

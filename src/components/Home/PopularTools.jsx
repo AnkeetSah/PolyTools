@@ -114,8 +114,8 @@ const PopularTools = () => {
   return (
     <div className="mb-10">
       <div className="flex xs:flex-col xs:items-start xs:gap-1.5 lg:gap-0 lg:flex-row justify-between items-center mb-4">
-        <h2 className="font-bold text-lg">Popular Tools</h2>
-        <div className="tabs-list bg-gray-100 py-1 px-1 rounded-lg flex gap-2 text-[12px] font-medium text-gray-900">
+        <h2 className="font-bold lg:text-lg xs:text-xl">Popular Tools</h2>
+        <div className="  tabs-list bg-gray-100 py-1 px-1 rounded-lg flex gap-2 lg:text-[12px] xs:text-sm font-medium text-gray-900">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -143,8 +143,8 @@ const PopularTools = () => {
                 {tool.icon}
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-medium">{tool.name}</h3>
-                <p className="text-gray-400 text-sm">{tool.description}</p>
+                <h3 className="text-lg xs:text-xl font-medium">{tool.name}</h3>
+                <p className="text-gray-400 lg:text-sm xs:text-lg">{tool.description}</p>
               </div>
             </div>
             <div className="mt-3">
