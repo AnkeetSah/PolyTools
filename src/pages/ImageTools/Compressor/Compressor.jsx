@@ -225,7 +225,7 @@ const Compressor = () => {
           </div>
 
           {/* How to Use Section */}
-          <section className="mt-10">
+          <section className="mt-10 bg-white shadow-lg rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-2">How to Use</h3>
             <ol className="list-decimal list-inside text-gray-600 space-y-1">
               <li>Click the "Select Images" button or drag and drop your images.</li>
