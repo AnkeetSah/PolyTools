@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Image, ArrowRight } from "lucide-react";
 import { LuFileAudio } from "react-icons/lu";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const PopularTools = () => {
   const [activeTab, setActiveTab] = useState("Image");
@@ -35,7 +36,7 @@ const PopularTools = () => {
       name: "Image Compressor",
       description: "Minimize size with minimal quality loss.",
       icon: <Image className="h-6 w-6 text-purple-500" />,
-      link: "#",
+      link: "image-tools/image-compressor",
     },
     {
       category: "Image",
@@ -148,12 +149,12 @@ const PopularTools = () => {
               </div>
             </div>
             <div className="mt-3">
-              <a
-                href={tool.link}
+              <NavLink
+               to={tool.link}
                 className="inline-flex items-center text-purple-600 text-sm font-medium"
               >
                 Try Now <ArrowRight className="ml-1 h-4 w-4" />
-              </a>
+              </NavLink>
             </div>
           </div>
         ))}

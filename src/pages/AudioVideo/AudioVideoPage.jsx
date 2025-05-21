@@ -1,21 +1,14 @@
 import React from 'react'
+import Banner from '../../components/Banner'
 
 const AudioVideoPage = () => {
+  const spanVal = "Featured Tools"
+  const nameVal = "Audio & Video Tools"
+  const senVal = "Edit, convert, and enhance your audio and video files with our powerful tools."
   return (
    <main className='w-full  bg-gray-50 pt-4 pb-8 px-4  h-full'>
-      <section className="mb-8">
-        <div className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-500 p-6 text-white shadow-lg animate-fade-in">
-          <span className="inline-block mb-2 px-3 py-1 rounded-full text-xs bg-white/20 hover:bg-white/30 transition">
-            Featured Tools
-          </span>
-          <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">
-            Audio & Video Tools
-          </h1>
-          <p className="text-base lg:text-lg opacity-90 mb-4 max-w-4xl">
-            Edit, convert, and enhance your audio and video files with our powerful tools.
-          </p>
-        </div>
-      </section>
+      <Banner spanVal={spanVal} nameVal={nameVal} senVal={senVal} />
+
       <div className="grid lg:grid-cols-3 gap-4">
 
         

@@ -1,12 +1,12 @@
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import ImageTools from './pages/ImageTools/ImageTools';
-import AudioVideoPage from './pages/AudioVideo/AudioVideoPage';
-import DocumentToolsPage from './pages/DocumentTools/DocumentToolsPage';
-import LinkQrToolsPage from './pages/LinkQrTools/LinkQrToolsPage';
-import NotFoundPage from './pages/NotFoundPage';
-
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import ImageTools from "./pages/ImageTools/ImageTools";
+import AudioVideoPage from "./pages/AudioVideo/AudioVideoPage";
+import DocumentToolsPage from "./pages/DocumentTools/DocumentToolsPage";
+import LinkQrToolsPage from "./pages/LinkQrTools/LinkQrToolsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import Compressor from "./pages/ImageTools/Compressor/Compressor";
 function App() {
   return (
     <Routes>
@@ -17,6 +17,7 @@ function App() {
         <Route path="document-tools" element={<DocumentToolsPage />} />
         <Route path="link-qr-tools" element={<LinkQrToolsPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="image-tools/image-compressor" element={<Compressor />} />
       </Route>
     </Routes>
   );
