@@ -14,6 +14,7 @@ const Sidebar = ({ onLinkClick }) => {
     { to: '/audio-video', icon: <LuFileAudio />, label: 'Audio-Video' },
     { to: '/document-tools', icon: <IoDocumentTextOutline />, label: 'Document Tools' },
     { to: '/link-qr-tools', icon: <IoIosLink />, label: 'Link QR Tools' },
+    { to: '/authentication', icon: <IoIosLink />, label: 'Authentication' },
   ];
 
   return (
