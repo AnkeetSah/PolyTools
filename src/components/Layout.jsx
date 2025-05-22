@@ -1,49 +1,47 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 import Header from './Header';
 import Sidebar from './SideBar';
 import Footer from './Footer';
 
 const Layout = () => {
+  const location = useLocation();
+  const isAuthPage = location.pathname === '/authentication'; // Add more paths if needed
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  console.log(isSidebarOpen)
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   return (
-    <div className="app-layout flex flex-col min-h-screen ">
-      <Header onHamburgerClick={toggleSidebar}  />
+    <div className="app-layout flex flex-col min-h-screen">
+      <Header onHamburgerClick={toggleSidebar} />
 
-      {/* Sidebar and Main Content */}
       <div className="flex flex-row flex-grow min-h-0 pt-12">
-        {/* Sidebar with fixed width */}
-       <div
-  className={`
-    z-50
-    
-    w-[70vw] fixed
-    lg:w-52 lg:fixed
-    top-[49.5px]
-    h-[calc(100vh-3rem)]
-    transform transition-transform duration-300 ease-in-out
-    ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-    lg:translate-x-0
-  `}
->
-  <Sidebar onLinkClick={() => setIsSidebarOpen(false)} />
-</div>
+        {/* Show Sidebar only if not on the Authentication page */}
+        {!isAuthPage && (
+          <div
+            className={`
+              z-50
+              w-[70vw] fixed
+              lg:w-52 lg:fixed
+              top-[49.5px]
+              h-[calc(100vh-3rem)]
+              transform transition-transform duration-300 ease-in-out
+              ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+              lg:translate-x-0
+            `}
+          >
+            <Sidebar onLinkClick={() => setIsSidebarOpen(false)} />
+          </div>
+        )}
 
-
-
-        {/* Main content takes remaining space */}
-        <main className="flex-grow overflow-auto  lg:pl-52">
-  <Outlet />
-</main>
-
+        <main className={`flex-grow overflow-auto ${!isAuthPage ? 'lg:pl-52' : ''}`}>
+          <Outlet />
+        </main>
       </div>
-
-     
     </div>
   );
 };
