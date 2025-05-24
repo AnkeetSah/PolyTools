@@ -15,6 +15,7 @@ const Sidebar = ({ onLinkClick }) => {
     { to: '/document-tools', icon: <IoDocumentTextOutline />, label: 'Document Tools' },
     { to: '/link-qr-tools', icon: <IoIosLink />, label: 'Link QR Tools' },
     { to: '/authentication', icon: <IoIosLink />, label: 'Authentication' },
+    { to: '/ai-tools', icon: <IoIosLink />, label: 'AI Tools' },
   ];
 
   return (

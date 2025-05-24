@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SelectButton = ({ text, onClick, disabled }) => {
   return (
