@@ -5,7 +5,7 @@ const Authentication = () => {
 
   return (
     <main className="flex flex-col items-center  h-full py-3  bg-gray-100 min-h-screen">
-     <div className="flex flex-col-reverse lg:flex-row h-auto lg:h-[95dvh] w-[90vw] lg:w-[70dvw] border border-purple-400 p-4 rounded-2xl shadow-lg bg-white">
+     <div className="flex flex-col-reverse gap-4 lg:flex-row h-auto lg:h-[88dvh] w-[90vw] lg:w-[70dvw] border border-purple-400 p-4 rounded-2xl shadow-lg bg-white">
 
         {/* Left Side: Form */}
         <div className="w-full lg:w-1/2 h-auto lg:h-full p-2">
@@ -78,14 +78,18 @@ const Authentication = () => {
 
           {/* Social Login Buttons */}
           <div className="flex flex-col items-center justify-center gap-2 mt-3">
-            <button className="bg-gray-200 hover:bg-white w-full text-[15px] p-2 border border-gray-300 rounded-xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md">
-              <img
-                className="w-5 h-5"
-                src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
-                alt="Google Icon"
-              />
-              Sign in With Google
-            </button>
+           <button
+  onClick={() => window.location.href = 'http://localhost:3000/auth/google'}
+  className="bg-gray-200 hover:bg-white w-full text-[15px] p-2 border border-gray-300 rounded-xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
+>
+  <img
+    className="w-5 h-5"
+    src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
+    alt="Google Icon"
+  />
+  Sign in With Google
+</button>
+
 
             <button className="bg-gray-200 hover:bg-white w-full text-[15px] p-2 border border-gray-300 rounded-xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md">
               <img
@@ -110,7 +114,7 @@ const Authentication = () => {
         </div>
 
         {/* Right Side: Illustration */}
-        <div className="w-full lg:w-1/2 h-64 lg:h-auto-2">
+        <div className="w-full lg:w-1/2 h-64 lg:h-auto">
 
           <img
             className="h-full rounded-2xl w-full object-cover"

@@ -2,3 +2,8 @@
 @theme{
      --breakpoint-xs: 300px;
 }
+/* styles.css */
+.button-gradient {
+  @apply bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white cursor-pointer;
+}
+
