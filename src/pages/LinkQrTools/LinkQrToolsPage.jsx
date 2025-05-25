@@ -20,7 +20,7 @@ const spanVal = "Featured Tools";
 const nameVal = "Link & QR Tools";
 const senVal = "Edit, convert, and enhance your links and QR codes with our powerful tools.";
 const LinkQrToolsPage = () => (
-  <main className="w-full bg-gray-50 pt-4 pb-8 px-4">
+  <main className="w-full bg-gray-50 pt-4 pb-8 px-4 h-full">
   <Banner spanVal={spanVal} nameVal={nameVal} senVal={senVal} />
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
