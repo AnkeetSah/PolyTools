@@ -5,7 +5,7 @@ import Reason from '../components/Home/Reason';
 
 const Home = () => {
   return (
-    <main className=" w-full  bg-gray-50 pt-4 pb-8 px-4">
+    <main className=" w-full  bg-gray-50 pt-6 pb-8 px-4">
       <Hero/>
       <PopularTools/>
       <Reason/>

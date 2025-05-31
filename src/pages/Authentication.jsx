@@ -79,7 +79,10 @@ const Authentication = () => {
           {/* Social Login Buttons */}
           <div className="flex flex-col items-center justify-center gap-2 mt-3">
            <button
-  onClick={() => window.location.href = 'http://localhost:3000/auth/google'}
+ onClick={() => {
+  window.location.href = 'http://localhost:3000/auth/google';
+}}
+
   className="bg-gray-200 hover:bg-white w-full text-[15px] p-2 border border-gray-300 rounded-xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
 >
   <img
