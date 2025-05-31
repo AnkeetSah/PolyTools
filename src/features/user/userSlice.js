@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // Fetch current user
 export const fetchUser = createAsyncThunk('user/fetchUser', async (_, { rejectWithValue }) => {
   try {
-    const res = await fetch('http://localhost:3000/me', { credentials: 'include' });
+    const res = await fetch('https://polytools-backend.onrender.com/me', { credentials: 'include' });
     if (!res.ok) throw new Error('Unauthorized');
     return await res.json();
 
@@ -15,7 +15,7 @@ export const fetchUser = createAsyncThunk('user/fetchUser', async (_, { rejectWi
 // Logout user
 export const logoutUser = createAsyncThunk('user/logout', async (_, { rejectWithValue }) => {
   try {
-    const res = await fetch('http://localhost:3000/logout', { credentials: 'include' });
+    const res = await fetch('https://polytools-backend.onrender.com/logout', { credentials: 'include' });
     if (!res.ok) throw new Error('Logout failed');
     return true;
   } catch (err) {

@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import {useDispatch} from 'react-redux';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 const Header = ( { onHamburgerClick }) => {
   const {user}= useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const isLoginPage = location.pathname === '/';
   return (
    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 px-6 md:px-28 h-16 flex items-center justify-between">
      <button
@@ -28,7 +32,8 @@ const Header = ( { onHamburgerClick }) => {
         {/* <Link to="/login" className="text-sm px-4 py-1.5 border border-gray-300 rounded-md hover:bg-gray-100 transition">
          
         </Link> */}
-         <div className="lg:flex items-center gap-3 p-1 px-3 rounded-lg xs:hidden  bg-purple-50 border border-purple-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+        {!isLoginPage && (
+           <div className="lg:flex items-center gap-3 p-1 px-3 rounded-lg xs:hidden  bg-purple-50 border border-purple-200 shadow-sm hover:shadow-md transition-shadow duration-300">
   <img
     src={user?.picture || "https://via.placeholder.com/40"}
     alt="User Avatar"
@@ -37,6 +42,7 @@ const Header = ( { onHamburgerClick }) => {
   <div className="text-sm font-semibold text-purple-800">{user?.name || "Guest"}</div>
 </div>
 
+        )}
 
         <button
           aria-label="Toggle dark mode"
